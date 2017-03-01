@@ -5,7 +5,7 @@ const BUTCHER_PRODUCTS = [
   'Ribeye'
 ];
 
-const OlderCoaster = React.createClass(
+const OlderCoaster = React.createClass({
   render() {
     return React.createElement('div', { className: 'oldercoaster'},
       [
@@ -16,11 +16,25 @@ const OlderCoaster = React.createClass(
             React.createElement('li', {}, 'Agnes'),
             React.createElement('li', {}, 'Muriel')
           ]
-        );
+        ),
       ]
-    );
+    )
   }
-);
+});
+
+class InFrontOfYou extends React.Component {
+  render() {
+    return React.createElement('div', {},
+      [
+        React.createElement('p', {}, "You shouldn't look too far."),
+        React.createElement('p', {}, [
+          'Sometimes, the solution is ',
+          React.createElement('strong', {}, 'right in front of you.')
+        ])
+      ]
+    )
+  }
+}
 
 
 ReactDOM.render(
